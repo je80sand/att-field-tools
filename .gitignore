@@ -1,0 +1,16 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Virtual envs
+venv/
+.venv/
+
+# macOS junk
+.DS_Store
+
+# Secrets / credentials
+service_account.json
+*.key
+*.pem
+.env

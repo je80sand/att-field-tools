@@ -1,0 +1,22 @@
+[
+  {
+    "id": "11111",
+    "address": "2 Test Lane",
+    "issue": "Sync Test",
+    "resolution": "N/A",
+    "signal": "Good",
+    "start_time": "2025-11-20 16:08:50",
+    "end_time": "2025-11-20 16:08:50",
+    "duration_minutes": 0.0
+  },
+  {
+    "id": "11111",
+    "address": "2 Test Lane",
+    "issue": "Sync Test",
+    "resolution": "N/A",
+    "signal": "Good",
+    "start_time": "2025-11-20 16:38:49",
+    "end_time": "2025-11-20 16:38:49",
+    "duration_minutes": 0.0
+  }
+]
