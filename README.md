@@ -1,54 +1,52 @@
-# AT&T Field Tools – Google Sheets Job Tracker
+# Field Technician Tools (Python)
 
-A desktop Python tool I built to help field technicians log and analyze jobs.
-It uses a custom GUI and the Google Sheets API (service accounts) to sync job
-data (ID, address, issue, resolution, signal, timestamps, duration, etc.)
-directly into a live spreadsheet.
+Inspired by real-world telecom field technician workflows.
 
----
+A Python-based automation toolkit designed to support real-world  field technician workflows.
 
-## 🚀 Features
-
-- Job entry GUI for field jobs
-- One-click sync to Google Sheets using a service account
-- Structured job data: ID, address, issue, resolution, signal, start/end time,
-  and duration in minutes
-- Uses a dedicated `Jobs` worksheet in a Google Sheet for clean storage
-- Designed around real AT&T technician workflow
+This project simulates tools commonly used by field technicians and service professionals to track jobs, validate input, store job data, and streamline daily operational tasks. It reflects practical automation scenarios drawn directly from real field experience.
 
 ---
 
-## 🧱 Tech Stack
+## 🎯 Why This Project Exists
 
-- **Language:** Python 3
-- **GUI:** tkinter
-- **Storage:** Google Sheets (via service account)
-- **Libraries:**
-  - `gspread`
-  - `google-auth`
-  - `oauth2client`
-  - `python-dateutil`
+This project was built to demonstrate how Python can be used to automate everyday field-service and technician workflows.
 
----
+It mirrors real-world tasks such as:
+- Capturing structured job information
+- Validating required inputs before submission
+- Logging completed jobs for tracking and reporting
+- Reducing manual paperwork and repetitive data entry
 
-## 🧠 How It Works (High Level)
-
-1. The GUI collects job details from the tech.
-2. When the user clicks **Sync**, the app:
-   - validates the inputs
-   - calculates job duration
-   - authenticates using a Google service account JSON key
-   - appends a new row into the `Jobs` worksheet of a Google Sheet.
-3. The sheet acts as a simple reporting database for field jobs.
+The goal is to showcase **practical, entry-level Python automation skills** that translate directly to operational and support environments.
 
 ---
 
-## 🛠️ Running the App Locally
+## 🧰 What This Tool Does
 
-> Note: `service_account.json` is **not** committed to this repo for security.
-> You must create your own service account if you want to run it.
+- Accepts technician job details (customer, address, issue, status)
+- Validates required fields before saving
+- Stores job records in a structured JSON file
+- Provides both **CLI-based** and **GUI-based** interaction
+- Simulates real field-service data tracking workflows
 
-1. Install dependencies:
+---
 
-   ```bash
-   pip install -r requirements.txt
+## ▶️ How to Run
+
+### 1️⃣ Install Dependencies
+From the project root directory:
+
+```bash
+pip install -r requirements.txt
+
+## 📌 Example Output
+
+Below is an example of the tool running successfully and creating a job record:
+
+```text
+Job created successfully
+Customer: John
+Address: 567 D St
+Issue: Low Light
+Status: Saved to jobs.json
