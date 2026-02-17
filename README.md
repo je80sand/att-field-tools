@@ -1,8 +1,6 @@
 # AT&T Field Tools (Python)
 
-![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![FastAPI](https://img.shields.io/badge/API-FastAPI-green)
+[![Tests](https://github.com/je80sand/att-field-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/je80sand/att-field-tools/actions)
 
 A real-world inspired field technician job tracking system built with Python.
 
