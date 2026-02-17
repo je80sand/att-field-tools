@@ -1,52 +1,179 @@
-# Field Technician Tools (Python)
+# AT&T Field Tools (Python)
 
-Inspired by real-world telecom field technician workflows.
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![FastAPI](https://img.shields.io/badge/API-FastAPI-green)
 
-A Python-based automation toolkit designed to support real-world  field technician workflows.
+A real-world inspired field technician job tracking system built with Python.
 
-This project simulates tools commonly used by field technicians and service professionals to track jobs, validate input, store job data, and streamline daily operational tasks. It reflects practical automation scenarios drawn directly from real field experience.
+This project simulates telecom field operations workflows including:
 
----
+- Job creation
+- Local JSON persistence
+- Analytics & statistics
+- REST API layer
+- Automated test coverage
 
-## 🎯 Why This Project Exists
-
-This project was built to demonstrate how Python can be used to automate everyday field-service and technician workflows.
-
-It mirrors real-world tasks such as:
-- Capturing structured job information
-- Validating required inputs before submission
-- Logging completed jobs for tracking and reporting
-- Reducing manual paperwork and repetitive data entry
-
-The goal is to showcase **practical, entry-level Python automation skills** that translate directly to operational and support environments.
+Designed to demonstrate practical backend engineering skills including data modeling, testing, and API design.
 
 ---
 
-## 🧰 What This Tool Does
+## 🚀 Features
 
-- Accepts technician job details (customer, address, issue, status)
-- Validates required fields before saving
-- Stores job records in a structured JSON file
-- Provides both **CLI-based** and **GUI-based** interaction
-- Simulates real field-service data tracking workflows
+### Core Job Tracking
+- Create job records
+- Store jobs in `jobs.json`
+- Track technician name
+- Track signal quality
+- Compute job duration
+
+### 📊 Analytics
+- Total jobs
+- Total minutes worked
+- Average minutes per job
+- Bad signal counts
+- Jobs per technician
+- Jobs per address
+
+### 🌐 REST API (FastAPI)
+- Health check endpoint
+- Create job endpoint
+- List jobs endpoint
+- Compute stats endpoint
+- Auto-generated Swagger documentation
+
+### ✅ Automated Testing
+- Pytest test suite
+- Validates job creation
+- Validates statistics computation
+- Validates empty cases
 
 ---
 
-## ▶️ How to Run
+## 📂 Project Structure
 
-### 1️⃣ Install Dependencies
-From the project root directory:
+```
+att_field_tools/
+│
+├── att_tools.py # Core business logic
+├── att_tools_gui.py # Tkinter GUI version
+├── api.py # FastAPI REST API
+├── jobs.json # Local job storage
+├── requirements.txt # Project dependencies
+├── README.md
+│
+└── tests/
+    ├── conftest.py
+    └── test_att_tools.py
+```
+
+---
+
+## 🛠 Installation
+
+From the project root:
 
 ```bash
 pip install -r requirements.txt
+```
 
-## 📌 Example Output
+Press Enter
 
-Below is an example of the tool running successfully and creating a job record:
+---
 
-```text
-Job created successfully
-Customer: John
-Address: 567 D St
-Issue: Low Light
-Status: Saved to jobs.json
+## ▶️ Run CLI / Core Logic
+
+```bash
+python att_tools.py
+```
+
+Press Enter
+
+---
+
+## 🌐 Run the API
+
+Start the FastAPI server:
+
+```bash
+uvicorn api:app --reload
+```
+
+Press Enter
+
+Then open your browser:
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## 🧪 Testing
+
+Run the full test suite:
+
+```bash
+pytest -q
+```
+
+Press Enter
+
+If successful, you should see:
+
+```
+3 passed in 0.52s
+```
+
+---
+
+## 📊 Example Job Creation Response
+
+```json
+{
+  "saved": true,
+  "job": {
+    "id": "123",
+    "address": "567 D St",
+    "issue": "Low Light",
+    "resolution": "Replaced bulb",
+    "signal": "Good",
+    "tech_name": "Jose"
+  }
+}
+```
+
+---
+
+## 🧠 Technical Stack
+
+- Python
+- FastAPI
+- Pydantic
+- Pytest
+- Uvicorn
+- JSON persistence
+- Tkinter GUI
+
+---
+
+## 🎯 Purpose
+
+This project demonstrates:
+
+- Clean backend architecture
+- Separation of concerns
+- Data modeling
+- Automated testing
+- API design
+- Real-world workflow simulation
+
+Inspired by telecom field technician operations.
+
+---
+
+## 👨‍💻 Author
+
+Jose Sandoval  
+Field Technician → Backend Engineer  
+Focused on automation, QA engineering, and backend development.
