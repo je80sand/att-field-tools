@@ -1,7 +1,5 @@
 # AT&T Field Tools (Python)
 
-# AT&T Field Tools (Python)
-
 [![CI](https://github.com/je80sand/att-field-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/je80sand/att-field-tools/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/je80sand/att-field-tools/branch/main/graph/badge.svg)](https://codecov.io/gh/je80sand/att-field-tools)
 
